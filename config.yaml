@@ -1,0 +1,38 @@
+model:
+  default: claude-sonnet-5-5
+  provider: anthropic
+  base_url: https://api.anthropic.com
+_config_version: 53
+terminal:
+  cwd: /Users/robi/Team-Workspace/Multi-Agent-Engineer
+agent:
+  disabled_toolsets:
+    - web
+    - browser
+    - image_gen
+    - tts
+    - code_execution
+    - cronjob
+    - delegation
+    - computer_use
+    - connections
+approvals:
+  deny:
+    - sudo
+    - rm
+    - curl
+    - wget
+    - ssh
+    - scp
+    - osascript
+    - git push
+fallback_providers:
+  - provider: nous
+    model: deepseek/deepseek-v4-pro
+  - provider: openai-api
+    model: gpt-4.1
+platforms:
+  telegram:
+    enabled: true
+command_allowlist:
+  - script execution via heredoc

@@ -1,0 +1,5 @@
+description: Builds and sets up a multi-agent system, a team of separate helpers
+  for one client or project, by copying generic helpers into the project with 
+  their own memory. Adds, edits and removes members and improves the setup after
+  an approved plan. It does not monitor or manage the project.
+description_auto: false
