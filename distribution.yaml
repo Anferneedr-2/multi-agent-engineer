@@ -1,33 +1,12 @@
-version: 1
-source:
-  repository: Anferneedr-2/multi-agent-engineer
-  ref: main
-  generic_helpers_path: agents/generic
+name: multi-agent-engineer
+version: 0.1.0
+description: "Hermes profile for engineering and configuring multi-agent setups"
+hermes_requires: ">=0.12.0"
+author: "Anferneedr-2"
+license: "MIT"
 
-target:
-  scope: single_project_or_client
-  project_dir: ./
-  agent_dir: ./.agents/team
-
-memory:
-  mode: isolated_per_member
-  base_path: ./.agents/memory
-  shared_memory: false
-
-lifecycle:
-  require_approved_plan: true
-  allowed_operations:
-    - copy_generic_helpers
-    - add_member
-    - edit_member
-    - remove_member
-    - apply_approved_improvements
-  excluded_responsibilities:
-    - project_monitoring
-    - project_management
-
-members: []
-  # Example entry when adding a helper:
-  # - id: researcher
-  #   from_generic: research-helper
-  #   memory_path: ./.agents/memory/researcher
+env_requires: []
+  # Example environment requirement:
+  # - name: OPENROUTER_API_KEY
+  #   description: "API key for model access"
+  #   required: true
